@@ -1,3 +1,7 @@
+
+
+/* Estilização */
+
 * {
 	margin : 0px;
 	padding : 0px;
@@ -7,7 +11,7 @@
 body {
 	margin : 0px auto;
 	font-family : Arial;
-	width : 90%;
+	width : 100%;
 	max-width : 1440px;
 	min-width : 320px;
 }
@@ -22,68 +26,97 @@ a {
 
 /* Topo */
 
-#topo {
+header {
 	background : #556B2F;
+	width : 100%;
+	position : fixed;
+	overflow : hidden;
 }
 
-#topo #titulo, 
-#topo #menu {
+header #titulo, 
+header nav {
 	color : white;
 	display : inline-block;
 }
 
-#topo #titulo{
-	width : 60%;
+header #titulo{
+	width : 70%;
 	float : left;
-	font-size : 1em;
+	font-size : 1.20em;
 }
 
-#topo h1 {
+header h1 {
+	color : #BDB76B;
 	text-align : center;
 	line-height : 50px;
 	font-weight : bold;
 	border : 0px solid red;
 }
 
-#topo #menu{
-	width : 40%;
-	float : right;
-	font-size : 1.2em;
+header h1 span {
+	color : white;
 }
 
-#topo #menu li {
+header nav {
+	position : relative;
+	width : 30%;
+	float : right;
+	font-size : 1.2em;
+	top : 0px;
+	height : 10px;
+	transition : 0.2s;
+}
+
+header nav:hover {
+	top : -50px;
+	height : 100px;
+	transition : 0.2s;
+}
+
+header nav span {
+	display : inline-block;
+	font-size : 1.6em;
+	line-height : 50px;
+	width : 50px;
+	height : 50px;
+}
+
+header nav li {
 	border : 0px solid white;
 	text-align : left;
 }
 
-#topo #menu a {
+header nav a {
 	display : inline-block;
 	padding : 5px;
 	width : 100%;
+	transition : text-indent 0.2s;
 }
 
-#topo #menu a:link,
-#topo #menu a:visited {
+header nav a:link,
+header nav a:visited {
 	color : white;
 	text-indent : 0em;
 }
 
-#topo #menu a:hover,
-#topo #menu a:active {
+header nav a:hover,
+header nav a:active {
 	background : white;
 	color : #556B2F;
-	text-indent : 0em;
+	text-indent : 1em;
 }
 
 /* Corpo */
 
-#corpo {
+article {
+	padding : 10px;
 	background : #BDB76B;
 }
 
 /* Rodapé */
 
-#rodape {
+footer {
+	padding : 5px 10px;
 	color : white;
 	background : #556B2F;
 }
