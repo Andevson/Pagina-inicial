@@ -1,4 +1,154 @@
+/* Design responsivo */
 
+@media (min-width : 1px) {
+	
+	header #logo{
+		height : 50px;
+		background-image : url("imagens/estrutura/logo.png");
+		background-position : center;
+		background-repeat : no-repeat;
+		background-size : 200px;
+	}
+	
+	header #titulo {
+		width : 70%;
+		height : 50px;
+	}
+	
+	header nav {
+		top : 0px;
+		width : 30%;
+		height : 50px;
+		transition : height 0.2s;
+	}
+
+	header nav:hover,
+	header nav:active {
+		top : -50px;
+		height : 100px;
+		transition : height 0.2s;
+	}
+	
+	header nav span {
+		text-align : left;
+	}
+	
+	header nav li {
+		text-align : left;
+	}
+	
+	header nav a {
+		width : 100%;
+		transition : text-indent 0.2s;
+	}
+
+	header nav a:link,
+	header nav a:visited {
+		color : #AA0000;
+		text-indent : 0em;
+	}
+
+	header nav a:hover,
+	header nav a:active {
+		background : #AA0000;
+		color : #FFDD00;
+		text-indent : 1em;
+	}
+	
+	article {
+		float : left;
+		width : 40%;
+	}
+	
+}
+
+@media (min-width : 576px) {
+	
+	header #logo{
+		height : 50px;
+		background-image : url("imagens/estrutura/logo.png");
+		background-position : center;
+		background-repeat : no-repeat;
+		background-size : 200px;
+	}
+	
+	article {
+		float : left;
+		width : 40%;
+	}
+	
+}
+
+@media (min-width : 768px) {
+	
+	header #logo{
+		height : 50px;
+		background-image : url("imagens/estrutura/logo.png");
+		background-position : center;
+		background-repeat : no-repeat;
+		background-size : 200px;
+	}
+	
+}
+
+@media (min-width : 992px) {
+	
+	header #logo{
+		height : 100px;
+		background-image : url("imagens/estrutura/logo.png");
+		background-position : center;
+		background-repeat : no-repeat;
+		background-size : 400px;
+	}
+	
+	header #titulo {
+		width : 50%;
+		height : 150px;
+	}
+	
+	header nav,
+	header nav:hover,
+	header nav:active {
+		width : 50%;
+		transition : none;
+		top : 20px;
+		height : 150px;
+	}
+	
+	header nav span {
+		text-align : center;
+	}
+	
+	header nav li {
+		text-align : center;
+	}
+	
+	header nav a {
+		float : left;
+		border : solid 1px black;
+		width : 150px;
+	}
+
+	header nav a:link,
+	header nav a:visited {
+		color : #AA0000;
+	}
+
+	header nav a:hover,
+	header nav a:active {
+		background : #AA0000;
+		color : #FFDD00;
+	}
+	
+	article {
+		float : left;
+		width : 25%;
+	}
+}
+
+@media (min-width : 1200px) {
+	/* */
+}
 
 /* Estilização */
 
@@ -10,7 +160,7 @@
 
 body {
 	margin : 0px auto;
-	font-family : Arial;
+	font-family : "Lucida Console", Monaco, monospace;
 	width : 100%;
 	max-width : 1440px;
 	min-width : 320px;
@@ -24,38 +174,76 @@ a {
 	text-decoration : none;
 }
 
+.clear {
+	clear : both;
+}
+
 /* Topo */
 
 header {
-	background : #556B2F;
+	background : #FFBB00;
+	border-bottom : 1px solid black;
 	width : 100%;
 	overflow : hidden;
 }
 
 header #titulo, 
 header nav {
-	color : white;
+	color : #AA0000;
 	display : inline-block;
 }
 
+/* Titulo */
+
 header #titulo{
-	width : 70%;
+	pointer-events : none;
 	float : left;
 	font-size : 1.20em;
 }
 
-header h1 {
-	color : #BDB76B;
+header #titulo h1 {
+	color : #AA0000;
 	text-align : center;
 	line-height : 50px;
 	font-weight : bold;
 	border : 0px solid red;
 }
 
-header h1 span {
-	color : white;
+/* Menu */
+
+header nav {
+	position : relative;
+	float : right;
+	font-size : 1.2em;
 }
 
+header nav span {
+	width : 100%;
+	max-width : 450px;
+	display : inline-block;
+	font-size : 1.6em;
+	line-height : 50px;
+	height : 50px;
+}
+
+header nav a {
+	display : inline-block;
+	line-height : 33.3px;
+	font-weight : bold;
+}
+
+header nav a:link,
+header nav a:visited {
+	color : #AA0000;
+}
+
+header nav a:hover,
+header nav a:active {
+	background : #AA0000;
+	color : #FFDD00;
+}
+
+/*
 header nav {
 	position : relative;
 	width : 30%;
@@ -63,14 +251,14 @@ header nav {
 	font-size : 1.2em;
 	top : 0px;
 	height : 10px;
-	transition : 0.2s;
+	transition : height 0.2s;
 }
 
 header nav:hover,
 header nav:active {
 	top : -50px;
 	height : 100px;
-	transition : 0.2s;
+	transition : height 0.2s;
 }
 
 header nav span {
@@ -88,55 +276,51 @@ header nav li {
 
 header nav a {
 	display : inline-block;
-	padding : 5px;
+	line-height : 33.3px;
+	font-weight : bold;
 	width : 100%;
 	transition : text-indent 0.2s;
 }
 
 header nav a:link,
 header nav a:visited {
-	color : white;
+	color : #AA0000;
 	text-indent : 0em;
 }
 
 header nav a:hover,
 header nav a:active {
-	background : white;
-	color : #556B2F;
+	background : #AA0000;
+	color : #FFDD00;
 	text-indent : 1em;
 }
+*/
 
 /* Corpo */
 
-article {
+section {
+	font-size : 1em;
 	padding : 10px;
-	background : #BDB76B;
+	background : #FFBB00;
 }
 
-article h2 {
+section h2 {
 	
 }
 
-article .flex {
-	display : flex;
-	flex-wrap : wrap;
-	flex-grow : 1;
-}
-
-section {
-	overflow : hidden;
-	width : 200px;
-	border : 1px solid black;
+article {
+	background : #FFCA00;
+	border-bottom : 1px solid black;
 	margin : 10px;
 	padding : 10px;
-	flex-grow : 1;
 	
 }
 
 /* Rodapé */
 
 footer {
+	clear : both;
 	padding : 5px 10px;
 	color : white;
-	background : #556B2F;
+	background : #8B0000;
 }
