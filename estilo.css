@@ -15,6 +15,10 @@
 		height : 50px;
 	}
 	
+	header #titulo h2 {
+		font-size : 1em;
+	}
+	
 	header nav {
 		top : 0px;
 		width : 30%;
@@ -45,6 +49,7 @@
 
 	header nav a:link,
 	header nav a:visited {
+		font-size : 0.9em;
 		background : #AA0000;
 		color : #FFFFFF;
 		text-indent : 0em;
@@ -52,6 +57,7 @@
 
 	header nav a:hover,
 	header nav a:active {
+		font-size : 1.2em;
 		background : #FFFFFF;
 		color : #AA0000;
 		text-indent : 1em;
@@ -79,6 +85,39 @@
 		/* */
 	}
 	
+	header #titulo {
+		width : 40%;
+	}
+	
+	header nav,
+	header nav:hover,
+	header nav:active {
+		width : 60%;
+		transition : none;
+		top : 0px;
+		height : 100px;
+	}
+	
+	header nav span {
+		text-align : center;
+	}
+	
+	header nav li {
+		text-align : center;
+	}
+	
+	header nav a {
+		float : left;
+		width : 150px;
+	}
+	
+	header nav li.primeiro-item a{
+		border-right : solid 1px #660000;
+	}
+	header nav li.ultimo-item a{
+		border-left : solid 1px #660000;
+	}
+	
 	section.mosaico article {
 		width : 50%;
 	}
@@ -95,6 +134,10 @@
 	header #titulo {
 		width : 50%;
 		height : 150px;
+	}
+	
+	header #titulo h2 {
+		font-size : 1.4em;
 	}
 	
 	header nav,
@@ -116,8 +159,14 @@
 	
 	header nav a {
 		float : left;
-		border : solid 1px #660000;
 		width : 150px;
+	}
+	
+	header nav li.primeiro-item a{
+		border-right : solid 1px #660000;
+	}
+	header nav li.ultimo-item a{
+		border-left : solid 1px #660000;
 	}
 }
 
@@ -229,6 +278,8 @@ header nav span {
 	line-height : 50px;
 	height : 50px;
 	color : #AA0000;
+	text-align : center;
+	text-transform : uppercase;
 }
 
 header nav a {
@@ -236,7 +287,7 @@ header nav a {
 	padding : 0px;
 	display : inline-block;
 	line-height : 33.3px;
-	font-weight : bold;
+	text-align : center;
 }
 
 /* Corpo */
