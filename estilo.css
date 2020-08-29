@@ -63,8 +63,8 @@
 		text-indent : 1em;
 	}
 	
-	section.mosaico article,
-	section.preencher article {
+	section.mosaico div.article-container,
+	section.preencher div.article-container {
 		float : left;
 		width : 100%;
 	}
@@ -118,7 +118,7 @@
 		border-left : solid 1px #660000;
 	}
 	
-	section.mosaico article {
+	section.mosaico div.article-container  {
 		width : 50%;
 	}
 	
@@ -176,7 +176,7 @@
 		/* */
 	}
 	
-	section.mosaico article {
+	section.mosaico div.article-container {
 		width : 33.3%;
 	}
 	
@@ -192,6 +192,7 @@
 }
 
 body {
+	background-color : #FFDD66;
 	margin : 0px auto;
 	font-family : "Lucida Console", Monaco, monospace;
 	width : 100vw;
@@ -215,7 +216,7 @@ a {
 /* Topo */
 
 header {
-	background-color : #FFBB00;
+	background-color : #FFDD66;
 	border-bottom : 1px solid black;
 	width : 100%;
 	overflow : hidden;
@@ -294,7 +295,7 @@ header nav a {
 
 section {
 	font-size : 1em;
-	background : #FFBB00;
+	background : #FFDD66;
 }
 
 section h2 {
@@ -317,9 +318,20 @@ section a:active{
 
 article {
 	box-sizing : border-box;
-	background : #FFCA00;
-	border-bottom : 2px solid #FF0000;
+	background : #FFEE77;
+	border-bottom : 0px solid black;
 	padding : 15px;
+	margin : 10px;
+	height : 400px;
+	overflow : overlay;
+}
+
+section .article-container {
+	display : inline-block;
+	padding : 0px;
+	margin : 0px;
+	
+	
 }
 
 section.preencher article p{
@@ -327,13 +339,17 @@ section.preencher article p{
 }
 
 article h3 {
-	background : orange;
+	background : #FFEE77;
 	margin : 10px;
+	padding : 10px;
 	text-align : center;
+	border : 1px solid black;
 }
 
 article p {
+	margin : 10px;
 	text-indent : 1em;
+	
 }
 
 article img {
@@ -352,13 +368,19 @@ article img.imagem-sm{
 
 article:hover,
 article:active {
-	background : #FFDD00;
+	background : #FFFF77;
 }
 
 article.apresentacao {
 	font-size : 1.2em;
 	line-height : 25px;
 	text-align : center;
+}
+
+article div.article-conteudo {
+	box-sizing : border-box;
+	border : 0px solid black;
+	margin : 20px 0px;
 }
 
 article div.data {
@@ -377,7 +399,7 @@ footer {
 	clear : both;
 	padding : 5px 10px;
 	color : white;
-	background : #8B0000;
+	background : #880000;
 }
 
 footer a {
